@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Paper Scissors Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header class="game-header">
+            <h1>Rock Paper Scissors</h1>
+            <p>Choose your weapon and challenge the computer!</p>
+        </header>
+
+        <main class="game-container">
+            <!-- Scoreboard -->
+            <div class="card scoreboard">
+                <h2>Score</h2>
+                <div class="score-display">
+                    <div class="score-item">
+                        <span class="score-label">Player</span>
+                        <span class="score-value" id="player-score">0</span>
+                    </div>
+                    <div class="score-divider">vs</div>
+                    <div class="score-item">
+                        <span class="score-label">Computer</span>
+                        <span class="score-value" id="computer-score">0</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Game Area -->
+            <div class="card game-area">
+                <div class="choices-section">
+                    <h3>Make Your Choice</h3>
+                    <div class="choice-buttons">
+                        <button class="choice-btn" data-choice="rock" aria-label="Choose Rock">
+                            <span class="choice-emoji">🗿</span>
+                            <span class="choice-name">Rock</span>
+                        </button>
+                        <button class="choice-btn" data-choice="paper" aria-label="Choose Paper">
+                            <span class="choice-emoji">📄</span>
+                            <span class="choice-name">Paper</span>
+                        </button>
+                        <button class="choice-btn" data-choice="scissors" aria-label="Choose Scissors">
+                            <span class="choice-emoji">✂️</span>
+                            <span class="choice-name">Scissors</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Current Choices Display -->
+                <div class="current-choices" id="current-choices" style="display: none;">
+                    <div class="choice-display">
+                        <h4>Your Choice</h4>
+                        <div class="choice-result">
+                            <span class="choice-emoji" id="player-choice-emoji"></span>
+                            <span class="choice-name" id="player-choice-name"></span>
+                        </div>
+                    </div>
+                    <div class="vs-divider">VS</div>
+                    <div class="choice-display">
+                        <h4>Computer's Choice</h4>
+                        <div class="choice-result">
+                            <span class="choice-emoji" id="computer-choice-emoji"></span>
+                            <span class="choice-name" id="computer-choice-name"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Result Display -->
+                <div class="result-section" id="result-section" style="display: none;">
+                    <div class="result-message" id="result-message"></div>
+                    <div class="result-explanation" id="result-explanation"></div>
+                </div>
+            </div>
+
+            <!-- Control Buttons -->
+            <div class="controls">
+                <button class="btn btn--primary btn--lg" id="play-again-btn" style="display: none;">
+                    Play Again
+                </button>
+                <button class="btn btn--outline" id="reset-btn">
+                    Reset Game
+                </button>
+            </div>
+        </main>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
